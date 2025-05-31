@@ -10,7 +10,7 @@ project in Google Cloud Console.
 
 Using GA4 BigQuery Calculated Fields in Looker Studio
 1. Connect to the BigQuery data source in your Looker Studio report. 
-2. Select the project and dataset where you want to pull data from BigQuery. 
+2. Select the project and dataset where you want to pull data from in BigQuery. 
 3. Open the Data panel within the table or chart that you want to use GA4 BigQuery data.
 4. Click the "Add a field" button > Add calculated field.
 5. Type in the appropriate field name for the dimension or metric.
