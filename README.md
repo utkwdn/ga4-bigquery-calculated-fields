@@ -2,7 +2,7 @@
 
 This repository contains a collection of SQL statements used to create custom GA4 dimensions and metrics in Looker Studio using Google Analytics 4 (GA4) data from BigQuery. These calculated fields are meant to cover the most common GA4 metrics used for web performance reporting, campaign tracking, and audience analysis.
 
-## USAGE INSTRUCTIONS 
+## Usage Instructions
 
 Prerequisite: You must have a Google Cloud Console account with a billing-enabled project. 
 A GA4 property should already be connected to your BigQuery instance within your
@@ -20,7 +20,7 @@ Using GA4 BigQuery Calculated Fields in Looker Studio
 The calculated field should now populate as a dimension or metric that you can use in the 
 Properties panel of your Looker Studio report. 
 
-## NOTES
+## Notes
 
 Using the correct aggregation method for metrics in scorecards, charts, and tables in Looker 
 Studio will result in the most accurate data using GA4 BigQuery data.
