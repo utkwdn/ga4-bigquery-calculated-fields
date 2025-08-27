@@ -105,6 +105,12 @@ WHEN Event Param Name = 'session_engaged'
 THEN Event Param Value 
 END 
 
+-- Metric: Give Form Submissions
+
+CASE 
+WHEN Event Name = 'form_submit_give_confirmation' THEN User Pseudo ID 
+END 
+
 -- Metric: Form Submissions 
 
 CASE 
