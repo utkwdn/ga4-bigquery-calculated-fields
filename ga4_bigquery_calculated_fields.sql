@@ -108,7 +108,7 @@ END
 -- Metric: Give Form Submissions
 
 CASE 
-WHEN Event Name = 'form_submit_give_confirmation' THEN User Pseudo ID 
+WHEN Event Name = 'form_submit_give_confirmation' THEN Sessions (CONCAT)
 END 
 
 -- Metric: Form Submissions 
@@ -124,6 +124,10 @@ COUNT(DISTINCT Sessions with Form Submissions) / COUNT(DISTINCT Session(CONCAT))
 -- Metric: Sessions (Integer Values)
 
 CONCAT(CASE WHEN Event Param Name = 'ga_session_id' THEN Event Param Value END, User Pseudo ID) 
+
+-- Metric: Sessions (CONCAT)
+
+CONCAT(CASE WHEN Event Param Name = 'ga_session_id' THEN Event Param Value END, User Pseudo ID)
 
 -- Metric: Session ID
 
