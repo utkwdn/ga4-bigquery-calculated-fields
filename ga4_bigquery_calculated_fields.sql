@@ -53,6 +53,7 @@ CASE
 WHEN REGEXP_CONTAINS(Session Source,'360|aol|baidu|biglobe|bing|chatgpt|daum|dogpile|duckduckgo|ecosia|google|msn|naver|postcard|qwant|so|sogou|terra|yahoo|yandex') and Session Medium in ('organic', 'referral') then 'Organic Search' 
 WHEN Session Source = '(direct)' AND Session Medium = '(none)' THEN 'Direct' 
 WHEN REGEXP_CONTAINS(Session Source, 'blogspot|buzzfeed|co|facebook|fb|getpocket|glassdoor|google|hootsuite|ig|instagram|linkedin|lnkd|medium|messenger|meta|naver|pinterest|quora|reddit|researchgate|scribd|skype|sm|snapchat|social|tiktok|twitter|typepad|weebly|wordpress|yelp|zalo') and Session Medium in ('Facebook_Desktop_Feed', 'Facebook_Mobile_Feed', 'Facebook_Right_Column', 'Instagram_Feed', 'Instagram_Stories', 'meta', 'referral', 'social', 'zalo') then 'Organic Social' 
+WHEN REGEXP_CONTAINS(Session Source, 'openai|chatgpt|perplexity|claude|copilot|microsoft|gemini|bard|grok|deepseek|mistral|meta') and Session Medium in ('referral') then 'AI Chatbot'
 WHEN REGEXP_CONTAINS(Session Source, 'bing|google|niche|searchall') and Session Medium in ('cpc', 'paid_ad', 'paidsearch') then 'Paid Search' 
 WHEN REGEXP_CONTAINS(Session Source, 'Facebook|facebook|fb|Instagram|instagram|ig|LinkedIn|linkedin|Meta|meta|paid|prospect|Reddit|reddit|Snapchat|snapchat|Tiktok|tiktok') and Session Medium in ('awareness', 'fb', 'ig', 'paid', 'paid_ad', 'paid_social', 'paidsocial', 'ppc') then 'Paid Social' 
 WHEN REGEXP_CONTAINS(Session Source, 'tradedesk|usat|youtube') and Session Medium in ('ottctv', 'paidvideo') then 'Paid Video' 
