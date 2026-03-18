@@ -109,7 +109,7 @@ END
 -- Metric: Give Form Submissions
 
 CASE 
-WHEN Event Name = 'form_submit_give_confirmation' THEN Sessions (CONCAT)
+WHEN Event Name = 'form_submit_give_confirmation' THEN Sessions
 END 
 
 -- Metric: Form Submissions 
@@ -120,13 +120,9 @@ END
 
 -- Metric: Form Submission Rate
 
-COUNT(DISTINCT Sessions with Form Submissions) / COUNT(DISTINCT Session(CONCAT)) 
+COUNT(DISTINCT Sessions with Form Submissions) / COUNT(DISTINCT Sessions) 
 
--- Metric: Sessions (Integer Values)
-
-CONCAT(CASE WHEN Event Param Name = 'ga_session_id' THEN Event Param Value END, User Pseudo ID) 
-
--- Metric: Sessions (CONCAT)
+-- Metric: Sessions
 
 CONCAT(CASE WHEN Event Param Name = 'ga_session_id' THEN Event Param Value END, User Pseudo ID)
 
