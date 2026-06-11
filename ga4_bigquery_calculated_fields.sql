@@ -96,7 +96,7 @@ END
 -- Metric: Clicks to Applications
 
 CASE  
-WHEN Event Name = 'click_application_undergrad' or Event Name = 'click_application_grad' THEN Sessions
+WHEN Event Name = 'click_application_undergrad' or Event Name = 'click_application_grad' THEN User Pseudo ID
 END
 
 -- Metric: Engaged Sessions
@@ -115,7 +115,7 @@ END
 -- Metric: Form Submissions 
 
 CASE 
-WHEN Event Name = 'form_submit_undergrad_rfi' or Event Name = 'form_submit_grad_rfi' THEN Sessions
+WHEN Event Name = 'form_submit_undergrad_rfi' or Event Name = 'form_submit_grad_rfi' THEN User Pseudo ID
 END 
 
 -- Metric: Form Submission Rate
