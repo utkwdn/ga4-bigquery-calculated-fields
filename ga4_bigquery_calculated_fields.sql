@@ -165,3 +165,12 @@ THEN Event Param (String)
 END 
 
 -- ==== Note: Use this metric when Page Path or Page Path + Query String is a dimension. ==== 
+
+-- ================================== OTHER FORMULAS ==============================================
+
+-- Canonical Page Location
+
+REGEXP_REPLACE(Page Location, "[?#].*$", "")
+
+-- === Note: Canonical Page Location takes full page URLs that have query strings attached to them, and normalizes it to its page path.
+-- === Note: Use "Canonical Page Location" when creating the Data Studio calculated field to filter for specific full page URLs.
