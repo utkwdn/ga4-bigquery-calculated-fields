@@ -40,15 +40,5 @@ Metrics requiring the COUNT DISTINCT aggregation method:
 
 The structure of the Web Page calculated field should look something like this:
 
-CASE
-  WHEN Canonical Page Location IN (
-    "https://www.utk.edu/turfgrass/",
-    "https://www.utk.edu/turfgrass/research/",
-    "https://www.utk.edu/turfgrass/team/",
-    "https://www.utk.edu/turfgrass/impact/",
-    "https://news.utk.edu/2026/03/03/fifa-returns-to-ut-for-final-pitch-management-research-field-day-ahead-of-world-cup-26/",
-    "https://news.utk.edu/2026/06/11/turfgrass-research-making-headlines-around-the-world/",
-  )
-  THEN "Yes"
-  ELSE "No"
-END
+<img width="944" height="502" alt="image" src="https://github.com/user-attachments/assets/122b4180-111d-4edd-852f-8370f2d0d408" />
+
