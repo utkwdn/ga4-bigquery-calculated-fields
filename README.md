@@ -22,7 +22,7 @@ Properties panel of your Looker Studio report.
 
 ## Notes
 
-Using the correct aggregation method for metrics in scorecards, charts, and tables in Looker 
+1. Using the correct aggregation method for metrics in scorecards, charts, and tables in Looker 
 Studio will result in the most accurate data using GA4 BigQuery data.
 
 Metrics requiring the COUNT aggregation method:
@@ -32,3 +32,23 @@ Metrics requiring the COUNT DISTINCT aggregation method:
 - Form Submissions
 - Sessions
 
+2. When creating a cross-domain page path table, do the following:
+
+- Use the "Views (String)" metric
+- Use the "Canonical Page Location" calculated field. This field takes full page URLs that have query strings attached to them, and normalizes them to its page path. 
+- Reference the "Canonical Page Location" calculated field in cross-domain web page calculated field that specifies what full page URLs should be included in the table.
+
+The structure of the Web Page calculated field should look something like this:
+
+CASE
+  WHEN Canonical Page Location IN (
+    "https://www.utk.edu/turfgrass/",
+    "https://www.utk.edu/turfgrass/research/",
+    "https://www.utk.edu/turfgrass/team/",
+    "https://www.utk.edu/turfgrass/impact/",
+    "https://news.utk.edu/2026/03/03/fifa-returns-to-ut-for-final-pitch-management-research-field-day-ahead-of-world-cup-26/",
+    "https://news.utk.edu/2026/06/11/turfgrass-research-making-headlines-around-the-world/",
+  )
+  THEN "Yes"
+  ELSE "No"
+END
